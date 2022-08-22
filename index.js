@@ -16,7 +16,18 @@ const app = express();
 
 //routes are endpoints, lets make one
 app.get('/', (req, res)=>{
-    res.send('Hello World!');
+    res.send('Hello World!!!');
+})
+
+//send user a star wars character
+app.get('/starwars', (req, res)=>{
+    res.send({
+        characterName: 'Princess Leia',
+        age: 'older',
+        lightsaberColor: 'not applicable',
+        father: 'Darth Vader ?',
+        quip: 'Being a baddie'
+    });
 })
 
 
